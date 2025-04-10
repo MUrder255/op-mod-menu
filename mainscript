@@ -1,0 +1,13 @@
+-- Add this in LoadModules:
+"aimbot.lua"
+
+-- Add this in MainTab toggles:
+MainTab:CreateToggle({
+    Name = "Aimbot",
+    Info = "Locks on closest visible target",
+    CurrentValue = false,
+    Flag = "AIMBOT_TOGGLE",
+    Callback = function(Value)
+        Modules.aimbot.Toggle(Value)
+    end,
+})
